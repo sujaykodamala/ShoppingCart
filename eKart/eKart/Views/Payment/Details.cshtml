@@ -1,0 +1,92 @@
+﻿@model eKart.Models.Payment
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Payment</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Customer_ID)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Customer_ID)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Name)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Name)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CardNumber)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CardNumber)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ExpiryDate)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ExpiryDate)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CVV)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CVV)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Billing_Address1)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Billing_Address1)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Billing_Address2)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Billing_Address2)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.City)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.City)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.State)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.State)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Zip)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Zip)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ContactNumber)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ContactNumber)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

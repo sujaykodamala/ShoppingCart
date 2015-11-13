@@ -1,0 +1,36 @@
+﻿@model eKart.Models.Products
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Products</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Product_Name)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Product_Name)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Product_Quantity)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Product_Quantity)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Product_Price)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Product_Price)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Product_D }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

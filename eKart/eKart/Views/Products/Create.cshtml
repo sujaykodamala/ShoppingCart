@@ -1,0 +1,75 @@
+﻿@model  eKart.Models.Products
+
+@{
+    ViewBag.Title = "Add Products";
+}
+
+<h2>Add Products</h2>
+
+@using (Html.BeginForm("Create", "Products", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Products</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Product_Name)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Product_Name)
+            @Html.ValidationMessageFor(model => model.Product_Name)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Product_Quantity)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Product_Quantity)
+            @Html.ValidationMessageFor(model => model.Product_Quantity)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Product_Price)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Product_Price)
+            @Html.ValidationMessageFor(model => model.Product_Price)
+        </div>
+        <div>
+            @Html.LabelFor(model=>model.Product_Photo)
+        </div>
+         <div>
+       
+            @Html.TextBoxFor(model=> model.Image, new{type="file"})
+            @Html.ValidationMessage("CustomError")
+           </div>
+     
+        <div class ="editor-label">
+           @Html.LabelFor(model => model.Category)
+        </div>
+        <div class="editor-field">
+            @Html.DropDownListFor(model => model.Category, Model.CategoryList, "Choose category")
+            @Html.ValidationMessageFor(model=>model.Category)
+        </div>
+        <div class ="editor-label">
+            @Html.LabelFor(model=>model.Gender)
+        </div>
+        <div class ="editor-field">
+            @Html.DropDownListFor(model => model.Gender, Model.GenderList, "Choose category")
+            @Html.ValidationMessageFor(model=>model.Gender)
+        </div>
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

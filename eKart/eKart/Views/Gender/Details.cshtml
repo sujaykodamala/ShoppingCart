@@ -1,0 +1,22 @@
+﻿@model eKart.Models.Gender
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Gender</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Gender_Name)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Gender_Name)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Gender_ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
